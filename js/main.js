@@ -45,7 +45,7 @@ function render() {
   // });
   // });
 
-  msgEL.textContent = `${TURNS[turn].toUpperCase()}'s Turn!`;
+  msgEL.textContent = `${TURNS[turn].toUpperCase()}'s Turn`;
 
 }
 
