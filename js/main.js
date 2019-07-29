@@ -17,6 +17,10 @@ document
   .querySelector("section.board")
   .addEventListener("click", handleClick);
 
+document
+  .querySelector("button")
+  .addEventListener("click", handleReset);
+
 /*----- functions -----*/
 init();
 
@@ -38,19 +42,26 @@ function render() {
   //   colArr.forEach(function (cell, rowIdx) {
   //     let div = document.getElementById(`c${colIdx}r${rowIdx}`);
   //     div.textContent = TURNS[cell];
+  // });
+  // });
 
-  // });
-  // });
+  msgEL.textContent = `${TURNS[turn].toUpperCase()}'s Turn!`;
+
 }
 
 function handleClick(event) {
   let box = event.target;
-  if (turn === 1) {
+  if (box.textContent) {
+    return;
+  } else if (turn === 1) {
     box.textContent = "X";
   } else {
     box.textContent = "O";
   }
   turn *= -1;
   render();
+}
 
+function handleReset(button) {
+  location.reload();
 }
