@@ -60,7 +60,7 @@ section.board {
   display: grid;
   grid-template-columns: repeat(3, 10vmin);
   grid-template-rows: repeat(3, 10vmin);
-  grid-gap: 3vmin;
+  grid-gap: 5vmin;
 }
 
 section.board div {
